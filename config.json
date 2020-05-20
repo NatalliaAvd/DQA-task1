@@ -1,0 +1,13 @@
+{
+  "dev":
+  {
+    "database": "C:/PycharmProjects/read_files/library.db",
+    "test_data_folder": "C:/PycharmProjects/TestFramework/test_data"
+  },
+
+  "uat":
+  {
+
+  }
+
+}

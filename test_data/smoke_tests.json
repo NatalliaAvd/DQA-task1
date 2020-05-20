@@ -1,0 +1,45 @@
+{
+  "tests": [
+    {
+      "name": "Check table 'Example' for data existing",
+      "query": "SELECT count(*) FROM Example",
+      "expected": 1
+    },
+
+    {
+      "name": "Check table 'Example_info' for data existing",
+      "query": "SELECT count(*) FROM Example_info",
+      "expected": 62547
+    },
+
+    {
+      "name": "Check count of words in lowercase",
+      "query": "SELECT SUM(count) From Example_info",
+      "expected": 52358
+    },
+
+    {
+      "name": "Check count of words in uppercase",
+      "query": "SELECT SUM(count_uppercase) From Example_info",
+      "expected": 10189
+    },
+
+    {
+      "name": "Count of words in file",
+      "query": "SELECT number_of_words - (words_with_capital_letters + words_in_lowercase) From Example",
+      "expected": 0
+    },
+
+    {
+      "name": "Check statistics from table Example",
+      "query": "SELECT * From Example",
+      "expected": ["Цветы для Элджернона", 2371, 62547,	291866,	10189,	52358]
+    },
+    {
+      "name": "Check correctness of book_name",
+      "query": "SELECT book_name FROM Example",
+      "expected": "Цветы для Элджернона"
+    }
+  ]
+
+}
