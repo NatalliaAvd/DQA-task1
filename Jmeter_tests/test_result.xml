@@ -254,4 +254,130 @@
 </samplerData>
 </sample>
 
+<sample t="131" it="0" lt="131" ct="125" ts="1590084387590" s="true" lb="Check table &quot;Example_info&quot; for data existing " rc="200" rm="OK" tn="Tests 1-1" dt="text" de="UTF-8" by="15" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9414">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/PycharmProjects/read_files/library.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count(*)
+62547
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] Select count(*) From &quot;Example_info&quot;
+
+</samplerData>
+</sample>
+
+<sample t="4" it="0" lt="4" ct="2" ts="1590087090814" s="true" lb="Check table &quot;Example_info&quot; for data existing " rc="200" rm="OK" tn="Tests 1-1" dt="text" de="UTF-8" by="15" sby="0" sc="1" ec="0" ng="1" na="1" hn="EPBYMINW9414">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/PycharmProjects/read_files/library.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count(*)
+62547
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] Select count(*) From &quot;Example_info&quot;
+
+</samplerData>
+</sample>
+<sample t="1" it="0" lt="1" ct="0" ts="1590087090818" s="false" lb="Check table &quot;Example&quot; for data existing " rc="200" rm="OK" tn="Tests 1-1" dt="text" de="UTF-8" by="11" sby="0" sc="1" ec="1" ng="1" na="1" hn="EPBYMINW9414">
+  <assertionResult>
+    <name>Response Assertion(Example)</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Response was null</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/PycharmProjects/read_files/library.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">count(*)
+1
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] Select count(*) from Example
+
+</samplerData>
+</sample>
+<sample t="5" it="0" lt="5" ct="0" ts="1590087090819" s="false" lb="Check count of words in lowercase" rc="200" rm="OK" tn="Tests 1-1" dt="text" de="UTF-8" by="20" sby="0" sc="1" ec="1" ng="1" na="1" hn="EPBYMINW9414">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Response was null</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/PycharmProjects/read_files/library.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">SUM(count)
+20528165
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT SUM(count) From Example_info
+      
+
+</samplerData>
+</sample>
+<sample t="4" it="0" lt="4" ct="0" ts="1590087090825" s="false" lb="Check count of words in uppercase" rc="200" rm="OK" tn="Tests 1-1" dt="text" de="UTF-8" by="29" sby="0" sc="1" ec="1" ng="1" na="1" hn="EPBYMINW9414">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Response was null</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/PycharmProjects/read_files/library.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">SUM(count_uppercase)
+7083751
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT SUM(count_uppercase) From Example_info
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1590087090830" s="false" lb="Count of words in file" rc="200" rm="OK" tn="Tests 1-1" dt="text" de="UTF-8" by="70" sby="0" sc="1" ec="1" ng="1" na="1" hn="EPBYMINW9414">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Response was null</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/PycharmProjects/read_files/library.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">number_of_words - (words_with_capital_letters + words_in_lowercase)
+0
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT number_of_words - (words_with_capital_letters + words_in_lowercase) From Example
+
+</samplerData>
+</sample>
+<sample t="0" it="0" lt="0" ct="0" ts="1590087090830" s="false" lb="Check correctness of book_name" rc="200" rm="OK" tn="Tests 1-1" dt="text" de="UTF-8" by="49" sby="0" sc="1" ec="1" ng="1" na="1" hn="EPBYMINW9414">
+  <assertionResult>
+    <name>Response Assertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: variable(book_result) expected to equal /
+
+****** received  : [[[[{book_name=Цветы для Элджернона}]]]]
+
+****** comparison: [[[Цветы для Элджернона              ]]]
+
+/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">shared:false, driver:org.sqlite.JDBC, url:jdbc:sqlite:/PycharmProjects/read_files/library.db, user:null</responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">book_name
+Цветы для Элджернона
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <samplerData class="java.lang.String">[Select Statement] SELECT book_name FROM Example
+
+</samplerData>
+</sample>
+
 </testResults>

@@ -8,7 +8,9 @@ class Connector:
 
     def execute(self, query):
         self.cursor.execute(query)
-        return self.cursor.fetchone()[0]
+        return self.cursor.fetchall()
+        # return self.cursor.fetchone()
+        # return self.cursor.fetchone()[0]
 
     def create_table(self, name, *args):
         self.conn.excute('INSERT {0}, ({1})'.format(name, *args))

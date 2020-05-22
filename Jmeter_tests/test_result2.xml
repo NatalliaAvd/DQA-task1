@@ -1,3 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1590003878278,3,Check count of words in lowercase,200,OK,Tests 1-1,text,false,Response was null,20,0,1,1,null,3,0,0
-1590003921872,3,Check count of words in lowercase,200,OK,Tests 1-1,text,false,Response was null,20,0,1,1,null,3,0,0

@@ -39,7 +39,14 @@
       "name": "Check correctness of book_name",
       "query": "SELECT book_name FROM Example",
       "expected": "Цветы для Элджернона"
+    },
+
+    {
+      "name": "Output all data",
+      "query": "SELECT * FROM Example_info",
+      "expected": "[['Даниэл', 5, 5], ['Киз', 5, 5], ['Цветы', 1, 1], ['для', 126, 6], ['Элджернона', 24, 24]]"
     }
+
   ]
 
 }

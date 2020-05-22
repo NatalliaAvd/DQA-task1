@@ -1,2 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1590003921878,0,Count of words in file,200,OK,Tests 1-1,text,false,Response was null,70,0,1,1,null,0,0,0

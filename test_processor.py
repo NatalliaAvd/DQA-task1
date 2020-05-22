@@ -18,12 +18,28 @@ class TestProcessor:
         test_data_folder = self.config.get_test_data_folder()
         return [f for f in glob.glob(test_data_folder + '/*.json', recursive=True)]
 
+    def data_transformation(self, query_results):
+        element1 = []
+        if len(query_results) == 1:
+            transformed_data = query_results[0]
+            if len(transformed_data) == 1:
+                element = transformed_data[0]
+                return element
+            elif len(transformed_data) > 1:
+                element = list(transformed_data)
+                return element
+        elif len(query_results) > 1:
+            for set in query_results:
+                element1.append(list(set))
+            return element1
+        else:
+            return 0
+
     def do_testing(self, file_name):
         self.logger.start_test(file_name)
 
         with open(file_name, encoding="utf-8") as f:
             test_data = eval(f.read())
-
 
         for test in test_data['tests']:
             self.logger.start_case(test['name'])
@@ -32,8 +48,10 @@ class TestProcessor:
             expected_result = test['expected']
             actual_result = self.connector.execute(query)
 
+            # transform data from [(), (),..] format
+            new_results = self.data_transformation(actual_result)
 
-            if actual_result == expected_result:
-                self.logger.add_pass(query, actual_result)
+            if new_results == expected_result:
+                self.logger.add_pass(query, new_results)
             else:
-                self.logger.add_fail(query, actual_result, expected_result)
+                self.logger.add_fail(query, new_results, expected_result)
